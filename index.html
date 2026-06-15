@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SFPM Engenharia — Plataforma de Gestão Operacional</title>
+  <meta name="description" content="Organize demandas, acompanhe equipes, visualize indicadores e mantenha o histórico da operação em uma plataforma personalizada.">
+  <meta property="og:title" content="SFPM Engenharia — Plataforma de Gestão Operacional">
+  <meta property="og:description" content="Seus processos empresariais em um só lugar. Gestão visual, indicadores e histórico centralizado.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="#" class="site-header__logo" aria-label="SFPM Engenharia — início">
+        <img src="assets/svg/logo.svg" alt="SFPM Engenharia" width="200" height="36">
+      </a>
+
+      <nav class="site-header__nav" aria-label="Navegação principal">
+        <a href="#solucao" class="site-header__nav-link">Solução</a>
+        <a href="#recursos" class="site-header__nav-link">Recursos</a>
+        <a href="#como-funciona" class="site-header__nav-link">Como funciona</a>
+        <a href="#planos" class="site-header__nav-link">Planos</a>
+        <a href="#seguranca" class="site-header__nav-link">Segurança</a>
+        <a href="#faq" class="site-header__nav-link">FAQ</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="#" class="btn btn-ghost" data-client-area>Área do Cliente</a>
+        <a href="#contato" class="btn btn-primary" data-demo>Solicitar demonstração</a>
+      </div>
+
+      <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="site-header__toggle-bar"></span>
+        <span class="site-header__toggle-bar"></span>
+        <span class="site-header__toggle-bar"></span>
+      </button>
+    </div>
+
+    <div class="site-header__mobile" id="mobile-menu" role="dialog" aria-label="Menu de navegação">
+      <nav class="site-header__mobile-nav">
+        <a href="#solucao" class="site-header__mobile-link">Solução</a>
+        <a href="#recursos" class="site-header__mobile-link">Recursos</a>
+        <a href="#como-funciona" class="site-header__mobile-link">Como funciona</a>
+        <a href="#planos" class="site-header__mobile-link">Planos</a>
+        <a href="#seguranca" class="site-header__mobile-link">Segurança</a>
+        <a href="#faq" class="site-header__mobile-link">FAQ</a>
+      </nav>
+      <div class="site-header__mobile-actions">
+        <a href="#" class="btn btn-secondary btn-block" data-client-area>Área do Cliente</a>
+        <a href="#contato" class="btn btn-primary btn-block" data-demo>Solicitar demonstração</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="hero" id="solucao">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content reveal">
+            <span class="hero__eyebrow">Plataforma de gestão operacional</span>
+            <h1 class="hero__title">Seus processos empresariais em um só lugar.</h1>
+            <p class="hero__desc">Organize demandas, acompanhe equipes, visualize indicadores e mantenha o histórico da operação em uma plataforma personalizada.</p>
+            <div class="btn-group">
+              <a href="#contato" class="btn btn-primary" data-demo>Solicitar demonstração</a>
+              <a href="#como-funciona" class="btn btn-outline">Ver como funciona</a>
+            </div>
+            <div class="trust-row">
+              <span class="trust-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Acesso web e mobile
+              </span>
+              <span class="trust-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Implantação personalizada
+              </span>
+              <span class="trust-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Histórico centralizado
+              </span>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal reveal-delay-2">
+            <div class="hero-float hero-float--demands">
+              <span>12</span> demandas ativas
+            </div>
+            <div class="hero-mockup">
+              <div class="hero-mockup__bar">
+                <span class="hero-mockup__dot hero-mockup__dot--red"></span>
+                <span class="hero-mockup__dot hero-mockup__dot--yellow"></span>
+                <span class="hero-mockup__dot hero-mockup__dot--green"></span>
+                <span class="hero-mockup__title">Painel operacional</span>
+              </div>
+              <div class="hero-mockup__body">
+                <div class="hero-kanban">
+                  <div>
+                    <div class="hero-kanban__col-title">Recebido</div>
+                    <div class="hero-kanban__card">Demanda A-042</div>
+                    <div class="hero-kanban__card">Demanda B-017</div>
+                  </div>
+                  <div>
+                    <div class="hero-kanban__col-title">Em andamento</div>
+                    <div class="hero-kanban__card hero-kanban__card--cyan">Demanda C-089</div>
+                  </div>
+                  <div>
+                    <div class="hero-kanban__col-title">Concluído</div>
+                    <div class="hero-kanban__card hero-kanban__card--green">Demanda D-031</div>
+                  </div>
+                </div>
+                <div class="hero-chart">
+                  <div class="hero-chart__label">Desempenho semanal</div>
+                  <svg viewBox="0 0 120 60" aria-hidden="true">
+                    <rect x="5" y="35" width="14" height="22" rx="3" fill="#2563eb" opacity="0.7"/>
+                    <rect x="25" y="22" width="14" height="35" rx="3" fill="#2563eb"/>
+                    <rect x="45" y="28" width="14" height="29" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="65" y="15" width="14" height="42" rx="3" fill="#06b6d4"/>
+                    <rect x="85" y="10" width="14" height="47" rx="3" fill="#06b6d4"/>
+                    <rect x="105" y="18" width="14" height="39" rx="3" fill="#22c55e"/>
+                  </svg>
+                </div>
+                <div class="hero-activity">
+                  <div class="hero-activity__label">Atividades recentes</div>
+                  <div class="hero-activity__item"><span class="hero-activity__dot"></span> Status atualizado — Etapa 3</div>
+                  <div class="hero-activity__item"><span class="hero-activity__dot"></span> Documento anexado</div>
+                  <div class="hero-activity__item"><span class="hero-activity__dot"></span> Responsável atribuído</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-float hero-float--done">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              8 processos concluídos
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Benefits strip -->
+    <section class="benefits-strip section--soft">
+      <div class="container">
+        <div class="benefits-strip__grid">
+          <div class="benefit-item reveal">
+            <div class="benefit-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="12" rx="1"/></svg>
+            </div>
+            <span class="benefit-item__text">Gestão visual por etapas</span>
+          </div>
+          <div class="benefit-item reveal reveal-delay-1">
+            <div class="benefit-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg>
+            </div>
+            <span class="benefit-item__text">Indicadores operacionais</span>
+          </div>
+          <div class="benefit-item reveal reveal-delay-2">
+            <div class="benefit-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+            </div>
+            <span class="benefit-item__text">Documentos centralizados</span>
+          </div>
+          <div class="benefit-item reveal reveal-delay-3">
+            <div class="benefit-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <span class="benefit-item__text">Controle de permissões</span>
+          </div>
+          <div class="benefit-item reveal reveal-delay-4">
+            <div class="benefit-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <span class="benefit-item__text">Histórico auditável</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Problems -->
+    <section class="section" id="problemas">
+      <div class="container">
+        <div class="grid-2 grid-2--wide-left">
+          <div class="reveal">
+            <span class="section-eyebrow">Desafios comuns</span>
+            <h2 class="section-title">Processos espalhados geram retrabalho e perda de controle</h2>
+            <p class="section-subtitle">Planilhas isoladas, comunicação fragmentada e falta de visibilidade comprometem a eficiência operacional.</p>
+          </div>
+          <div class="problems__list">
+            <div class="problem-item reveal">
+              <div class="problem-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="problem-item__content">
+                <h3>Planilhas dispersas</h3>
+                <p>Informações duplicadas em múltiplos arquivos dificultam a tomada de decisão.</p>
+                <span class="problem-item__solution">→ Ambiente único e centralizado</span>
+              </div>
+            </div>
+            <div class="problem-item reveal reveal-delay-1">
+              <div class="problem-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="problem-item__content">
+                <h3>Falta de visibilidade</h3>
+                <p>Sem acompanhamento visual, etapas ficam paradas sem que ninguém perceba.</p>
+                <span class="problem-item__solution">→ Kanban e dashboards em tempo real</span>
+              </div>
+            </div>
+            <div class="problem-item reveal reveal-delay-2">
+              <div class="problem-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="problem-item__content">
+                <h3>Histórico perdido</h3>
+                <p>Alterações sem registro impedem auditoria e análise de melhorias.</p>
+                <span class="problem-item__solution">→ Logs e histórico de atividades</span>
+              </div>
+            </div>
+            <div class="problem-item reveal reveal-delay-3">
+              <div class="problem-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="problem-item__content">
+                <h3>Responsáveis indefinidos</h3>
+                <p>Tarefas sem dono claro geram atrasos e conflitos entre equipes.</p>
+                <span class="problem-item__solution">→ Atribuição e controle de permissões</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Features -->
+    <section class="section section--soft" id="recursos">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Recursos principais</span>
+          <h2 class="section-title">Tudo que sua operação precisa para funcionar com clareza</h2>
+          <p class="section-subtitle">Ferramentas pensadas para equipes que precisam de controle, visibilidade e rastreabilidade em cada etapa.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card feature-card--half reveal">
+            <span class="card__label">Fluxo de trabalho</span>
+            <h3 class="card__title">Kanban visual</h3>
+            <p class="card__text">Acompanhe demandas por etapas com arrastar e soltar, status personalizados e visão clara do andamento.</p>
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="12" rx="1"/></svg>
+            </div>
+            <div class="feature-card__mock">
+              <div class="feature-mini-kanban">
+                <div class="feature-mini-kanban__col"><div class="feature-mini-kanban__tag"></div><div class="feature-mini-kanban__tag"></div></div>
+                <div class="feature-mini-kanban__col"><div class="feature-mini-kanban__tag"></div></div>
+                <div class="feature-mini-kanban__col"><div class="feature-mini-kanban__tag"></div><div class="feature-mini-kanban__tag"></div></div>
+              </div>
+            </div>
+            <div class="card__benefit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Visibilidade imediata do pipeline
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--third reveal reveal-delay-1">
+            <span class="card__label">Análise</span>
+            <h3 class="card__title">Indicadores de BI</h3>
+            <p class="card__text">Dashboards com métricas operacionais para acompanhar desempenho e tomar decisões.</p>
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg>
+            </div>
+            <div class="feature-card__mock feature-mini-chart">
+              <svg viewBox="0 0 100 50" aria-hidden="true">
+                <rect x="5" y="25" width="12" height="22" rx="2" fill="#2563eb" opacity="0.6"/>
+                <rect x="22" y="15" width="12" height="32" rx="2" fill="#2563eb"/>
+                <rect x="39" y="20" width="12" height="27" rx="2" fill="#06b6d4"/>
+                <rect x="56" y="8" width="12" height="39" rx="2" fill="#06b6d4"/>
+                <rect x="73" y="12" width="12" height="35" rx="2" fill="#22c55e"/>
+              </svg>
+            </div>
+            <div class="card__benefit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Dados que orientam a operação
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--third reveal reveal-delay-2">
+            <span class="card__label">Qualidade</span>
+            <h3 class="card__title">Controle de processos</h3>
+            <p class="card__text">Checklists por etapa garantem que requisitos sejam cumpridos antes de avançar.</p>
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <div class="feature-card__mock">
+              <div class="feature-checklist">
+                <div class="feature-checklist__item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Documentação verificada</div>
+                <div class="feature-checklist__item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Responsável confirmado</div>
+                <div class="feature-checklist__item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Aprovação pendente</div>
+              </div>
+            </div>
+            <div class="card__benefit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Padronização sem retrabalho
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--half reveal">
+            <span class="card__label">Documentação</span>
+            <h3 class="card__title">Arquivos centralizados</h3>
+            <p class="card__text">Anexe fotos, relatórios e documentos diretamente nas demandas, com armazenamento seguro na nuvem.</p>
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+            </div>
+            <div class="feature-card__mock">
+              <div class="feature-files">
+                <span class="feature-file"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg> Relatório.pdf</span>
+                <span class="feature-file"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Foto_01.jpg</span>
+                <span class="feature-file"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg> Checklist.xlsx</span>
+              </div>
+            </div>
+            <div class="card__benefit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Tudo vinculado à demanda
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--third reveal reveal-delay-1">
+            <span class="card__label">Rastreabilidade</span>
+            <h3 class="card__title">Histórico e auditoria</h3>
+            <p class="card__text">Registro completo de alterações, movimentações e ações para consulta e conformidade.</p>
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="feature-card__mock">
+              <div class="feature-timeline">
+                <div class="feature-timeline__item">Status alterado — 14:32</div>
+                <div class="feature-timeline__item">Arquivo anexado — 11:05</div>
+                <div class="feature-timeline__item">Demanda criada — 09:18</div>
+              </div>
+            </div>
+            <div class="card__benefit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Transparência total
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--wide reveal reveal-delay-2">
+            <span class="card__label">Governança</span>
+            <h3 class="card__title">Permissões de usuários</h3>
+            <p class="card__text">Defina perfis de acesso para administração, gestão, operação e visualização — cada usuário vê apenas o que precisa.</p>
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="feature-card__mock">
+              <div class="feature-permissions">
+                <div class="feature-perm feature-perm--active">Admin</div>
+                <div class="feature-perm feature-perm--active">Gestão</div>
+                <div class="feature-perm">Operação</div>
+                <div class="feature-perm">Fiscal</div>
+                <div class="feature-perm">Projetista</div>
+                <div class="feature-perm">Visualização</div>
+              </div>
+            </div>
+            <div class="card__benefit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Segurança por perfil de acesso
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Demo -->
+    <section class="section section--dark" id="demonstracao">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Demonstração</span>
+          <h2 class="section-title">Veja como a plataforma organiza sua operação</h2>
+          <p class="section-subtitle">Interface intuitiva para acompanhar fluxos, indicadores e documentos em um único ambiente.</p>
+        </div>
+
+        <div class="tabs reveal">
+          <div class="tabs__nav" role="tablist">
+            <button class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="kanban">Kanban</button>
+            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="indicadores">Indicadores</button>
+            <button class="tabs__btn" role="tab" aria-selected="false" data-tab="documentos">Documentos</button>
+          </div>
+
+          <div class="tabs__panel is-active" id="tab-kanban" role="tabpanel">
+            <div class="demo-mockup">
+              <div class="demo-kanban">
+                <div class="demo-kanban__col">
+                  <div class="demo-kanban__header">Recebido</div>
+                  <div class="demo-kanban__card">Projeto estrutural — Etapa 1</div>
+                  <div class="demo-kanban__card">Manutenção preventiva</div>
+                </div>
+                <div class="demo-kanban__col">
+                  <div class="demo-kanban__header">Análise</div>
+                  <div class="demo-kanban__card">Inspeção técnica</div>
+                </div>
+                <div class="demo-kanban__col">
+                  <div class="demo-kanban__header">Execução</div>
+                  <div class="demo-kanban__card">Montagem em campo</div>
+                  <div class="demo-kanban__card">Soldagem especial</div>
+                </div>
+                <div class="demo-kanban__col">
+                  <div class="demo-kanban__header">Concluído</div>
+                  <div class="demo-kanban__card">Entrega finalizada</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" id="tab-indicadores" role="tabpanel">
+            <div class="demo-mockup">
+              <div class="demo-bi">
+                <div class="demo-bi__stat">
+                  <div class="demo-bi__value">24</div>
+                  <div class="demo-bi__label">Demandas ativas</div>
+                </div>
+                <div class="demo-bi__stat">
+                  <div class="demo-bi__value">87%</div>
+                  <div class="demo-bi__label">Taxa de conclusão</div>
+                </div>
+                <div class="demo-bi__stat">
+                  <div class="demo-bi__value">3.2d</div>
+                  <div class="demo-bi__label">Tempo médio por etapa</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" id="tab-documentos" role="tabpanel">
+            <div class="demo-mockup">
+              <div class="demo-docs">
+                <div class="demo-doc">
+                  <div class="demo-doc__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+                  </div>
+                  <div class="demo-doc__info"><span>Relatório técnico.pdf</span><small>Anexado há 2 horas</small></div>
+                </div>
+                <div class="demo-doc">
+                  <div class="demo-doc__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  </div>
+                  <div class="demo-doc__info"><span>Registro_fotográfico.jpg</span><small>Anexado ontem</small></div>
+                </div>
+                <div class="demo-doc">
+                  <div class="demo-doc__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+                  </div>
+                  <div class="demo-doc__info"><span>Checklist_etapa.docx</span><small>Anexado há 3 dias</small></div>
+                </div>
+                <div class="demo-doc">
+                  <div class="demo-doc__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+                  </div>
+                  <div class="demo-doc__info"><span>Plano_de_ação.pdf</span><small>Anexado há 1 semana</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Indicators -->
+    <section class="section" id="indicadores">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Capacidades</span>
+          <h2 class="section-title">Recursos pensados para a realidade da sua operação</h2>
+          <p class="section-subtitle">Benefícios concretos do produto, sem promessas genéricas de mercado.</p>
+        </div>
+        <div class="grid-3">
+          <div class="indicator-card reveal">
+            <div class="indicator-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="indicator-card__title">Até 5 usuários</h3>
+            <p class="indicator-card__text">Plano Essencial para equipes enxutas.</p>
+          </div>
+          <div class="indicator-card reveal reveal-delay-1">
+            <div class="indicator-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="indicator-card__title">Até 10 usuários</h3>
+            <p class="indicator-card__text">Plano Profissional para operações maiores.</p>
+          </div>
+          <div class="indicator-card reveal reveal-delay-2">
+            <div class="indicator-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3 class="indicator-card__title">Computador e celular</h3>
+            <p class="indicator-card__text">Acesso web responsivo de qualquer dispositivo.</p>
+          </div>
+          <div class="indicator-card reveal">
+            <div class="indicator-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3 class="indicator-card__title">Implantação personalizada</h3>
+            <p class="indicator-card__text">Configuração adaptada aos seus processos.</p>
+          </div>
+          <div class="indicator-card reveal reveal-delay-1">
+            <div class="indicator-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="indicator-card__title">Histórico centralizado</h3>
+            <p class="indicator-card__text">Todas as ações registradas em um só lugar.</p>
+          </div>
+          <div class="indicator-card reveal reveal-delay-2">
+            <div class="indicator-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="12" rx="1"/></svg>
+            </div>
+            <h3 class="indicator-card__title">Gestão visual das etapas</h3>
+            <p class="indicator-card__text">Kanban configurável para seu fluxo de trabalho.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real operation (social proof alternative) -->
+    <section class="section section--soft" id="operacao-real">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Origem do produto</span>
+          <h2 class="section-title">Desenvolvido a partir de uma operação real</h2>
+          <p class="section-subtitle">A plataforma surgiu da necessidade de organizar demandas, etapas, documentos, responsáveis e indicadores em um único ambiente de gestão.</p>
+        </div>
+        <div class="real-op__grid">
+          <div class="real-op__item reveal">
+            <div class="real-op__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <span class="real-op__text">Utilização por equipe operacional</span>
+          </div>
+          <div class="real-op__item reveal reveal-delay-1">
+            <div class="real-op__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <span class="real-op__text">Controle de usuários e perfis</span>
+          </div>
+          <div class="real-op__item reveal reveal-delay-2">
+            <div class="real-op__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="12" rx="1"/></svg></div>
+            <span class="real-op__text">Acompanhamento por Kanban</span>
+          </div>
+          <div class="real-op__item reveal">
+            <div class="real-op__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg></div>
+            <span class="real-op__text">Dashboards e indicadores</span>
+          </div>
+          <div class="real-op__item reveal reveal-delay-1">
+            <div class="real-op__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg></div>
+            <span class="real-op__text">Documentos centralizados</span>
+          </div>
+          <div class="real-op__item reveal reveal-delay-2">
+            <div class="real-op__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <span class="real-op__text">Histórico de atividades</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. How it works -->
+    <section class="section section--soft" id="como-funciona">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Como funciona</span>
+          <h2 class="section-title">Da configuração à operação em quatro etapas</h2>
+          <p class="section-subtitle">Um processo estruturado para colocar sua equipe no controle desde o primeiro dia.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__number">1</div>
+            <h3 class="step__title">Diagnóstico</h3>
+            <p class="step__text">Mapeamos seus processos, etapas e necessidades operacionais.</p>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <div class="step__number">2</div>
+            <h3 class="step__title">Configuração</h3>
+            <p class="step__text">Personalizamos fluxos, campos, permissões e integrações.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step__number">3</div>
+            <h3 class="step__title">Treinamento</h3>
+            <p class="step__text">Capacitamos sua equipe para operar a plataforma com autonomia.</p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step__number">4</div>
+            <h3 class="step__title">Evolução contínua</h3>
+            <p class="step__text">Ajustamos o sistema conforme sua operação cresce e muda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Google -->
+    <section class="section" id="google">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Integração</span>
+          <h2 class="section-title">Construído sobre o ecossistema Google</h2>
+          <p class="section-subtitle">Aproveite a infraestrutura confiável do Google Workspace para dados, arquivos e comunicação.</p>
+        </div>
+        <div class="google-grid">
+          <div class="google-card reveal">
+            <div class="google-card__icon google-card__icon--sheets">S</div>
+            <div>
+              <h3 class="google-card__title">Google Sheets</h3>
+              <p class="google-card__text">Base de dados estruturada com acesso controlado e familiaridade para sua equipe.</p>
+            </div>
+          </div>
+          <div class="google-card reveal reveal-delay-1">
+            <div class="google-card__icon google-card__icon--drive">D</div>
+            <div>
+              <h3 class="google-card__title">Google Drive</h3>
+              <p class="google-card__text">Armazenamento seguro de documentos, fotos e anexos vinculados às demandas.</p>
+            </div>
+          </div>
+          <div class="google-card reveal reveal-delay-2">
+            <div class="google-card__icon google-card__icon--gmail">M</div>
+            <div>
+              <h3 class="google-card__title">Gmail</h3>
+              <p class="google-card__text">Notificações automáticas por e-mail em mudanças de status e alertas de prazo.</p>
+            </div>
+          </div>
+          <div class="google-card reveal reveal-delay-3">
+            <div class="google-card__icon google-card__icon--script">&lt;&gt;</div>
+            <div>
+              <h3 class="google-card__title">Apps Script</h3>
+              <p class="google-card__text">Lógica de negócio personalizada sem necessidade de servidores dedicados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Security -->
+    <section class="section section--dark" id="seguranca">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Segurança</span>
+          <h2 class="section-title">Controle e rastreabilidade em cada ação</h2>
+          <p class="section-subtitle">Governança pensada para operações que exigem conformidade e responsabilidade.</p>
+        </div>
+        <div class="security-grid">
+          <div class="card card--dark reveal">
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="card__title">Perfis de acesso</h3>
+            <p class="card__text">Níveis diferenciados para administração, gestão, operação e visualização restrita.</p>
+          </div>
+          <div class="card card--dark reveal reveal-delay-1">
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="card__title">Logs de atividade</h3>
+            <p class="card__text">Registro detalhado de alterações, uploads e movimentações para auditoria.</p>
+          </div>
+          <div class="card card--dark reveal reveal-delay-2">
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3 class="card__title">Controle de etapas</h3>
+            <p class="card__text">Checklists obrigatórios impedem avanço sem cumprimento de requisitos.</p>
+          </div>
+          <div class="card card--dark reveal reveal-delay-3">
+            <div class="card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card__title">Backup na nuvem</h3>
+            <p class="card__text">Dados protegidos pela infraestrutura Google com redundância automática.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Plans -->
+    <section class="section" id="planos">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Planos e valores</span>
+          <h2 class="section-title">Escolha a solução ideal para sua operação</h2>
+          <p class="section-subtitle">Comece com os recursos essenciais e evolua o sistema conforme os processos da sua empresa.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <h3 class="pricing-card__name">Essencial</h3>
+            <p class="pricing-card__desc">Recursos fundamentais para equipes que estão organizando seus processos.</p>
+            <div class="pricing-card__users">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Até 5 usuários
+            </div>
+            <div class="pricing-card__price-row">
+              <div class="pricing-card__price-label">Implantação</div>
+              <div class="pricing-card__price-value">Solicitar proposta</div>
+            </div>
+            <div class="pricing-card__price-row">
+              <div class="pricing-card__price-label">Mensalidade</div>
+              <div class="pricing-card__price-value">Solicitar proposta</div>
+            </div>
+            <div class="pricing-card__cta">
+              <a href="#contato" class="btn btn-secondary btn-block" data-demo>Solicitar proposta</a>
+            </div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Kanban visual</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Gestão de demandas</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Anexos e documentos</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Histórico de atividades</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Notificações por e-mail</li>
+            </ul>
+            <p class="pricing-card__note">Ideal para equipes iniciando a digitalização.</p>
+          </article>
+
+          <article class="pricing-card pricing-card--featured reveal reveal-delay-1">
+            <span class="badge badge--featured pricing-card__badge">Mais escolhido</span>
+            <h3 class="pricing-card__name">Profissional</h3>
+            <p class="pricing-card__desc">Recursos avançados para operações com múltiplas equipes e indicadores.</p>
+            <div class="pricing-card__users">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              Até 10 usuários
+            </div>
+            <div class="pricing-card__price-row">
+              <div class="pricing-card__price-label">Implantação</div>
+              <div class="pricing-card__price-value">Solicitar proposta</div>
+            </div>
+            <div class="pricing-card__price-row">
+              <div class="pricing-card__price-label">Mensalidade</div>
+              <div class="pricing-card__price-value">Solicitar proposta</div>
+            </div>
+            <div class="pricing-card__cta">
+              <a href="#contato" class="btn btn-primary btn-block" data-demo>Solicitar proposta</a>
+            </div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tudo do Essencial</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Dashboards e indicadores BI</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Checklists por etapa</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Perfis de acesso avançados</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Alertas de prazo</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Suporte prioritário</li>
+            </ul>
+            <p class="pricing-card__note">Recomendado para operações em crescimento.</p>
+          </article>
+
+          <article class="pricing-card reveal reveal-delay-2">
+            <h3 class="pricing-card__name">Personalizado</h3>
+            <p class="pricing-card__desc">Solução sob medida para processos complexos e integrações específicas.</p>
+            <div class="pricing-card__users">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Usuários sob medida
+            </div>
+            <div class="pricing-card__price-row">
+              <div class="pricing-card__price-label">Implantação</div>
+              <div class="pricing-card__price-value">Solicitar proposta</div>
+            </div>
+            <div class="pricing-card__price-row">
+              <div class="pricing-card__price-label">Mensalidade</div>
+              <div class="pricing-card__price-value">Solicitar proposta</div>
+            </div>
+            <div class="pricing-card__cta">
+              <a href="#contato" class="btn btn-secondary btn-block" data-demo>Solicitar proposta</a>
+            </div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tudo do Profissional</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Módulos personalizados</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Integrações específicas</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Fluxos exclusivos</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Treinamento dedicado</li>
+              <li class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> SLA personalizado</li>
+            </ul>
+            <p class="pricing-card__note">Para operações com requisitos especiais.</p>
+          </article>
+        </div>
+
+        <p class="pricing-disclaimer reveal">Valores de referência. A proposta final depende dos módulos, personalizações, integrações e requisitos de implantação.</p>
+      </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="section-title">Perguntas frequentes</h2>
+          <p class="section-subtitle">Respostas objetivas sobre a plataforma e como começar.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-item__question" aria-expanded="false">
+              O que é a plataforma SFPM Engenharia?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">É uma plataforma de gestão operacional personalizada que centraliza demandas, etapas, documentos, responsáveis e indicadores em um único ambiente web, construída sobre o ecossistema Google.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-item__question" aria-expanded="false">
+              Preciso instalar algum software?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">Não. A plataforma funciona diretamente no navegador, tanto em computadores quanto em dispositivos móveis. Basta ter acesso à internet e credenciais de login.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-item__question" aria-expanded="false">
+              Como funciona a implantação?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">Iniciamos com um diagnóstico dos seus processos, configuramos a plataforma conforme suas necessidades, treinamos a equipe e acompanhamos a operação inicial. O prazo varia conforme a complexidade.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-item__question" aria-expanded="false">
+              Posso personalizar fluxos e campos?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">Sim. Etapas do Kanban, campos de demanda, checklists, perfis de acesso e notificações são configurados de acordo com a realidade da sua operação durante a implantação.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-item__question" aria-expanded="false">
+              Quais perfis de acesso existem?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">A plataforma suporta perfis como administração, gestão, fiscal, projetista, operação e visualização. Cada perfil tem permissões específicas definidas na configuração.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-item__question" aria-expanded="false">
+              Como solicitar uma demonstração?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">Clique em "Solicitar demonstração" em qualquer seção da página ou entre em contato pelo WhatsApp. Nossa equipe agenda uma apresentação personalizada da plataforma.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Final CTA -->
+    <section class="section section--gradient final-cta" id="contato">
+      <div class="container">
+        <div class="final-cta__inner">
+          <div class="reveal">
+            <h2 class="final-cta__title">Transforme processos espalhados em uma operação organizada.</h2>
+            <p class="final-cta__text">Conheça uma solução configurada para a realidade da sua equipe.</p>
+            <div class="btn-group">
+              <a href="#contato" class="btn btn-light" data-demo>Solicitar demonstração</a>
+              <a href="#" class="btn btn-outline-light" data-whatsapp>Falar pelo WhatsApp</a>
+            </div>
+          </div>
+          <div class="final-cta__art reveal reveal-delay-2" aria-hidden="true">
+            <svg viewBox="0 0 320 240" fill="none">
+              <rect x="20" y="30" width="280" height="180" rx="16" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+              <rect x="40" y="55" width="80" height="60" rx="8" fill="rgba(37,99,235,0.3)"/>
+              <rect x="130" y="55" width="80" height="60" rx="8" fill="rgba(6,182,212,0.25)"/>
+              <rect x="220" y="55" width="60" height="60" rx="8" fill="rgba(34,197,94,0.25)"/>
+              <path d="M40 140h240" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <rect x="40" y="155" width="120" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+              <rect x="40" y="175" width="90" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+              <rect x="40" y="195" width="150" height="8" rx="4" fill="rgba(255,255,255,0.08)"/>
+              <circle cx="260" cy="170" r="30" stroke="rgba(6,182,212,0.4)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <path d="M250 170l8 8 16-16" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="assets/svg/logo.svg" alt="SFPM Engenharia" width="200" height="36">
+          <p>Plataforma de gestão operacional personalizada para engenharia, indústria e tecnologia.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Navegação</h4>
+          <nav class="site-footer__links" aria-label="Links do rodapé">
+            <a href="#solucao" class="site-footer__link">Solução</a>
+            <a href="#recursos" class="site-footer__link">Recursos</a>
+            <a href="#como-funciona" class="site-footer__link">Como funciona</a>
+            <a href="#planos" class="site-footer__link">Planos</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Suporte</h4>
+          <nav class="site-footer__links">
+            <a href="#seguranca" class="site-footer__link">Segurança</a>
+            <a href="#faq" class="site-footer__link">FAQ</a>
+            <a href="#contato" class="site-footer__link">Contato</a>
+            <a href="#" class="site-footer__link" data-whatsapp>WhatsApp</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Contato</h4>
+          <nav class="site-footer__links">
+            <a href="#contato" class="site-footer__link" data-demo>Solicitar demonstração</a>
+            <a href="#" class="site-footer__link" data-client-area>Área do Cliente</a>
+          </nav>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 SFPM Engenharia. Todos os direitos reservados.</span>
+        <span>Plataforma de gestão operacional</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
