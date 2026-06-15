@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>SFPM Engenharia — Plataforma de Gestão Operacional</title>
   <meta name="description" content="Organize demandas, acompanhe equipes, visualize indicadores e mantenha o histórico da operação em uma plataforma personalizada.">
   <meta property="og:title" content="SFPM Engenharia — Plataforma de Gestão Operacional">
@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/visual.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
 
@@ -67,12 +69,21 @@
   <main>
 
     <!-- 1. Hero -->
-    <section class="hero" id="solucao">
+    <section class="hero section-visual" id="solucao">
+      <div class="bg-orbs" aria-hidden="true">
+        <span class="bg-orbs__orb bg-orbs__orb--1"></span>
+        <span class="bg-orbs__orb bg-orbs__orb--2"></span>
+        <span class="bg-orbs__orb bg-orbs__orb--3"></span>
+      </div>
+      <div class="bg-pattern" aria-hidden="true"></div>
       <div class="container">
         <div class="hero__grid">
           <div class="hero__content reveal">
-            <span class="hero__eyebrow">Plataforma de gestão operacional</span>
-            <h1 class="hero__title">Seus processos empresariais em um só lugar.</h1>
+            <div class="hero__badge-row">
+              <span class="hero__badge-dot" aria-hidden="true"></span>
+              <span class="hero__eyebrow">Plataforma de gestão operacional</span>
+            </div>
+            <h1 class="hero__title">Seus processos empresariais <span class="text-gradient">em um só lugar.</span></h1>
             <p class="hero__desc">Organize demandas, acompanhe equipes, visualize indicadores e mantenha o histórico da operação em uma plataforma personalizada.</p>
             <div class="btn-group">
               <a href="#contato" class="btn btn-primary" data-demo>Solicitar demonstração</a>
@@ -150,9 +161,10 @@
     </section>
 
     <!-- 2. Benefits strip -->
-    <section class="benefits-strip section--soft">
+    <section class="benefits-strip">
       <div class="container">
-        <div class="benefits-strip__grid">
+        <div class="benefits-strip__wrap reveal">
+          <div class="benefits-strip__grid">
           <div class="benefit-item reveal">
             <div class="benefit-item__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="12" rx="1"/></svg>
@@ -184,16 +196,92 @@
             <span class="benefit-item__text">Histórico auditável</span>
           </div>
         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase visual -->
+    <section class="showcase section-visual">
+      <div class="showcase__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Interface do produto</span>
+          <h2 class="section-title">Visualize sua operação com clareza e controle</h2>
+          <p class="section-subtitle">Kanban, indicadores e documentos integrados — tudo pensado para equipes que precisam de agilidade e rastreabilidade.</p>
+        </div>
+        <div class="showcase__grid">
+          <article class="showcase-panel reveal">
+            <div class="showcase-panel__screen">
+              <div class="showcase-panel__bar"><span></span><span></span><span></span></div>
+              <div class="showcase-kanban">
+                <div class="showcase-kanban__col">
+                  <div class="showcase-kanban__head">Recebido</div>
+                  <div class="showcase-kanban__card"></div>
+                  <div class="showcase-kanban__card"></div>
+                </div>
+                <div class="showcase-kanban__col">
+                  <div class="showcase-kanban__head">Andamento</div>
+                  <div class="showcase-kanban__card"></div>
+                </div>
+                <div class="showcase-kanban__col">
+                  <div class="showcase-kanban__head">Concluído</div>
+                  <div class="showcase-kanban__card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-panel__content">
+              <span class="showcase-panel__label">Fluxo visual</span>
+              <h3 class="showcase-panel__title">Kanban operacional</h3>
+              <p class="showcase-panel__text">Acompanhe cada demanda por etapa, com status claros e movimentação intuitiva.</p>
+            </div>
+          </article>
+          <article class="showcase-panel reveal reveal-delay-1">
+            <div class="showcase-panel__screen">
+              <div class="showcase-panel__bar"><span></span><span></span><span></span></div>
+              <div class="showcase-chart">
+                <div class="showcase-chart__bar"></div>
+                <div class="showcase-chart__bar"></div>
+                <div class="showcase-chart__bar"></div>
+                <div class="showcase-chart__bar"></div>
+                <div class="showcase-chart__bar"></div>
+              </div>
+            </div>
+            <div class="showcase-panel__content">
+              <span class="showcase-panel__label">Inteligência</span>
+              <h3 class="showcase-panel__title">Indicadores em tempo real</h3>
+              <p class="showcase-panel__text">Dashboards que traduzem a operação em números acionáveis para gestores.</p>
+            </div>
+          </article>
+          <article class="showcase-panel reveal reveal-delay-2">
+            <div class="showcase-panel__screen">
+              <div class="showcase-panel__bar"><span></span><span></span><span></span></div>
+              <div class="showcase-docs">
+                <div class="showcase-doc-row"><span class="showcase-doc-row__icon"></span><span class="showcase-doc-row__line"></span></div>
+                <div class="showcase-doc-row"><span class="showcase-doc-row__icon"></span><span class="showcase-doc-row__line showcase-doc-row__line--short"></span></div>
+                <div class="showcase-doc-row"><span class="showcase-doc-row__icon"></span><span class="showcase-doc-row__line"></span></div>
+                <div class="showcase-doc-row"><span class="showcase-doc-row__icon"></span><span class="showcase-doc-row__line showcase-doc-row__line--short"></span></div>
+              </div>
+            </div>
+            <div class="showcase-panel__content">
+              <span class="showcase-panel__label">Documentação</span>
+              <h3 class="showcase-panel__title">Arquivos centralizados</h3>
+              <p class="showcase-panel__text">Relatórios, fotos e checklists vinculados à demanda, acessíveis de qualquer lugar.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- 3. Problems -->
-    <section class="section" id="problemas">
+    <section class="section section-visual" id="problemas">
+      <div class="bg-orbs" aria-hidden="true">
+        <span class="bg-orbs__orb bg-orbs__orb--2"></span>
+      </div>
       <div class="container">
         <div class="grid-2 grid-2--wide-left">
           <div class="reveal">
             <span class="section-eyebrow">Desafios comuns</span>
-            <h2 class="section-title">Processos espalhados geram retrabalho e perda de controle</h2>
+            <h2 class="section-title">Processos espalhados geram retrabalho e <span class="text-gradient">perda de controle</span></h2>
             <p class="section-subtitle">Planilhas isoladas, comunicação fragmentada e falta de visibilidade comprometem a eficiência operacional.</p>
           </div>
           <div class="problems__list">
@@ -239,15 +327,26 @@
             </div>
           </div>
         </div>
+        <div class="problems-visual reveal">
+          <div class="problems-visual__inner" aria-hidden="true"></div>
+          <div class="problems-visual__overlay">
+            <div class="problems-visual__stat">
+              <span class="problems-visual__number">1</span>
+              <span class="problems-visual__label">ambiente unificado</span>
+            </div>
+            <p class="problems-visual__quote">Centralize demandas, etapas, documentos e indicadores — e dê à sua equipe a clareza que planilhas isoladas nunca vão oferecer.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 4. Features -->
-    <section class="section section--soft" id="recursos">
+    <section class="section section--soft section-visual" id="recursos">
+      <div class="bg-pattern" aria-hidden="true"></div>
       <div class="container">
         <div class="section-header reveal">
           <span class="section-eyebrow">Recursos principais</span>
-          <h2 class="section-title">Tudo que sua operação precisa para funcionar com clareza</h2>
+          <h2 class="section-title">Tudo que sua operação precisa para <span class="text-gradient">funcionar com clareza</span></h2>
           <p class="section-subtitle">Ferramentas pensadas para equipes que precisam de controle, visibilidade e rastreabilidade em cada etapa.</p>
         </div>
 
@@ -682,11 +781,14 @@
     </section>
 
     <!-- 10. Plans -->
-    <section class="section" id="planos">
+    <section class="section section-visual" id="planos">
+      <div class="bg-orbs" aria-hidden="true">
+        <span class="bg-orbs__orb bg-orbs__orb--1"></span>
+      </div>
       <div class="container">
         <div class="section-header reveal">
           <span class="section-eyebrow">Planos e valores</span>
-          <h2 class="section-title">Escolha a solução ideal para sua operação</h2>
+          <h2 class="section-title">Escolha a solução ideal para <span class="text-gradient">sua operação</span></h2>
           <p class="section-subtitle">Comece com os recursos essenciais e evolua o sistema conforme os processos da sua empresa.</p>
         </div>
 

@@ -60,12 +60,14 @@ const SITE_CONFIG = {
       menuToggle.setAttribute('aria-expanded', 'false');
       mobileMenu.classList.remove('is-open');
       document.body.style.overflow = '';
+      document.body.style.touchAction = '';
     }
 
     function openMenu() {
       menuToggle.setAttribute('aria-expanded', 'true');
       mobileMenu.classList.add('is-open');
       document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
     }
 
     menuToggle.addEventListener('click', function () {
