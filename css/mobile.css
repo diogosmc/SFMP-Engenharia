@@ -1,5 +1,30 @@
 /* Mobile-first — estilos base para telas pequenas (padrão) */
 
+/* Desativar backdrop-filter pesado no mobile */
+@media (max-width: 767px) {
+  .site-header,
+  .site-header--scrolled,
+  .benefits-strip__wrap,
+  .hero-float,
+  .hero-mockup,
+  .showcase-panel,
+  .problems-visual__overlay,
+  .card--glass,
+  .indicator-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .site-header,
+  .site-header--scrolled {
+    background: var(--surface-header-scrolled);
+  }
+
+  .benefits-strip__wrap {
+    background: var(--surface-card);
+  }
+}
+
 html {
   overflow-x: hidden;
 }
@@ -44,7 +69,8 @@ body {
 }
 
 /* Header compacto */
-.site-header__logo img {
+.site-header__logo img,
+.site-header__logo .logo {
   max-height: 32px;
   width: auto;
 }
@@ -664,7 +690,8 @@ body {
     text-align: left;
   }
 
-  .site-header__logo img {
+  .site-header__logo img,
+  .site-header__logo .logo {
     max-height: 36px;
   }
 }

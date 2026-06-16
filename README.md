@@ -11,24 +11,27 @@ A plataforma apresentada é construída sobre o ecossistema Google (Sheets, Driv
 ## Tecnologias
 
 - HTML5
-- CSS3 (design system com variáveis CSS)
+- CSS3 (design tokens semânticos, temas claro/escuro)
 - JavaScript vanilla
-- SVG
+- SVG + fotos Unsplash (lazy load)
 
 Sem frameworks, sem build e sem backend.
 
 ## Estrutura
 
 ```
-├── index.html       # Página principal
-├── css/             # Estilos modulares
-├── js/main.js       # Interatividade e configuração de links
-└── assets/svg/      # Logo e ícones
+├── index.html          # Página principal
+├── css/
+│   ├── critical.css    # Tokens, temas, base, layout (above-the-fold)
+│   ├── site.css        # Componentes, seções, visual, animações
+│   └── mobile.css      # Overrides mobile-first
+├── js/main.js          # Interatividade, tema e configuração
+└── assets/svg/         # Logo e ícones
 ```
 
 ## Configuração
 
-Links de WhatsApp, Área do Cliente e CTAs de demonstração ficam em `js/main.js`:
+Links, tema e imagens de fundo ficam em `js/main.js`:
 
 ```js
 const SITE_CONFIG = {
@@ -36,8 +39,44 @@ const SITE_CONFIG = {
   demoAnchor: '#contato',
   clientAreaUrl: '#',
   whatsappMessage: 'Olá! Gostaria de conhecer a plataforma SFPM Engenharia.',
+  theme: 'system', // system | light | dark
+  backgrounds: {
+    hero: 'https://images.unsplash.com/...',
+    demo: 'https://images.unsplash.com/...',
+    problems: 'https://images.unsplash.com/...',
+    cta: 'https://images.unsplash.com/...',
+  },
 };
 ```
+
+### Tema claro / escuro
+
+- Padrão: **automático** (segue `prefers-color-scheme` do sistema)
+- Toggle no header alterna: sistema → claro → escuro
+- Preferência salva em `localStorage` (`sfpm-theme`)
+- Script anti-flash no `<head>` evita piscada ao recarregar
+
+### Fotos de fundo
+
+Substitua as URLs em `SITE_CONFIG.backgrounds` pelas fotos da empresa quando disponíveis. Com `prefers-reduced-data: reduce`, o site usa apenas gradientes CSS.
+
+## Antes de publicar
+
+Substitua os placeholders em `js/main.js` antes do go-live:
+
+| Campo | Descrição |
+|-------|-----------|
+| `whatsapp` | Número com DDI (ex.: `5521999999999`) |
+| `clientAreaUrl` | URL real da Área do Cliente |
+| `whatsappMessage` | Mensagem padrão do WhatsApp |
+| `backgrounds.*` | Fotos próprias (opcional) |
+
+Checklist rápido:
+
+- [ ] WhatsApp e Área do Cliente configurados
+- [ ] Logo legível em modo claro e escuro (header + footer)
+- [ ] Teste mobile (320px) sem scroll horizontal
+- [ ] GitHub Pages com `.nojekyll` na raiz
 
 ## Execução local
 
